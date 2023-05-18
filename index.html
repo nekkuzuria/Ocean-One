@@ -92,7 +92,7 @@
               Proper disposal and reduction are necessary to protect our planet
               and its inhabitants.
             </p>
-            <a class="btn btn-primary btn-xl" href="#about">Take Action</a>
+            <a class="btn btn-primary btn-xl" href="#about" onclick="alert('I am taking action!')">Take Action</a>
           </div>
         </div>
       </div>
@@ -108,20 +108,24 @@
           <div class="col-lg-3 col-md-6 text-left my-4">
             <div class="mt-5 align-self-center">
               <h3 class="h4 mb-2">Align</h3>
-              <p class="text-muted mb-0">
+              <p class="text-muted mb-0" id="align-content">
                 66% of people (73% of Millennials) are willing to pay more for
                 products and services from companies committed to positive
                 social and environmental impact.
               </p>
               <br />
+              <textarea id="textArea" style="display: none;" cols="30" rows="10"></textarea>
               <a class="btn btn-primary btn-s" href="#">LEARN MORE</a>
+              <a onclick="showTextArea()" id="edit">Edit</a>
+              
+
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 text-left my-4">
             <div class="mt-5">
               <h3 class="h4 mb-2">KICKSTART</h3>
-              <p class="text-muted mb-0">
+              <p class="text-muted mb-0" id="kickstart">
                 Ocean One are a turnkey solution to begin the journey of
                 reducing your businesss environmental footprint or going plastic
                 neutral.
@@ -315,7 +319,7 @@
             <div class="form-group">
               <!-- <label for="form-name">Name</label> -->
               <input
-                type="email"
+                type="text"
                 class="form-control"
                 id="form-name"
                 placeholder="Name"
@@ -342,7 +346,9 @@
             </div>
             <b></b>
             <br>
-            <button class="btn btn-primary btn-s" type="submit">Contact Us</button>
+            <button class="btn btn-primary btn-s" type="submit" onclick="writeSend()">Contact Us</button>
+            <br> <br>
+            <p id="output"></p>
           </form>
         </div>
       </div>
@@ -384,5 +390,6 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="js/kode-program.js"></script>
   </body>
 </html>
