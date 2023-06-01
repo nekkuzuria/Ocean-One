@@ -165,6 +165,8 @@
                     if ($result) {
                     // Iterate over each row in the result set
                     while ($row = mysqli_fetch_assoc($result)) {
+                      echo '<div class="col-md-4">';
+
                       switch($numberRow){
                           case 1 :
                             echo '<img src="assets/icon/fighting.png" class="icon">';
@@ -183,7 +185,6 @@
 
                     // Output the row data
                     echo '
-                      <div class="col-md-4">
                       <h5 class="my-3">' . $text . '</h5>
                       </div>
                     ';
